@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Ui  Droppabel</title>
+
+
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet"  type="text/css"/>
+    <script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript">
+
+    </Script>
+        <style type="text/css">
+            .ui-widget-header{
+                background: rgb(255, 255, 0);
+                border: 1px solid grey;
+                color: #000000;
+                font-weight: bold;
+            }
+            .ui-widget-content{
+                background: red;
+                border: 1px solid #DDDDDD;
+                color: #ffffff;
+            }
+
+            .MyCls{background-color: #0000ff;colo:#ffffff}
+            #Sky9student{
+                width: 200px;
+                height: 200px;
+                padding: 10px;
+                margin: 0px 5px 10px 0 ;
+            }
+            #sky9{
+                width: 250px;
+                height: 250px;
+                padding: 10px;
+                margin: 10px;
+            }
+            </style>
+
+            <script type="text/javascript">
+                $(document).ready(function(){
+
+                    $("#Sky9students").draggable();
+
+                    $("#Sky9").droppable({
+                        accept:"#Sky9students",
+                        drop:function(event,ui){
+                            $(this).addClass("MyCls").find("p").html("Done....");
+                        }
+                    });
+                });
+            </script>
+</head>
+<body>
+    <div id="Sky9students" class="ui-widget-content">
+        <p>hi...I M BCA student.</p>
+    </div>
+    <hr/>
+    <div id="Sky9" class="ui-widget-header">
+        <p>welcomec to vasani page</p>
+    </div>
+</body>
+</html>
